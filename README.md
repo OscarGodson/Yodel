@@ -24,7 +24,7 @@ $('#request').bind('click',function(){
 
 //Step 3: Notify!
 $('#notify-me').bind('click',function(){
-  y.notify('Title',''the message','notification-img.png');
+  y.notify('Title','the message','notification-img.png');
 });
 ```
 
