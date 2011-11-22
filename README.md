@@ -13,18 +13,20 @@ The library will support more browsers like Mobile Firefox soon as well.
 
 Yodel is super easy. There are three steps to notifications. One, create a new instance of `yodel()`, two you need to request permission to post a notification, then three, actually post the notification. _(jQuery is used for clean examples, but not required)_
 
-    //Step 1: New yodel instance
-    var y = new yodel();
+```javascript
+//Step 1: New yodel instance
+var y = new yodel();
 
-    //Step 2: Ask permission (SEE NOTE BELOW CODE)
-    $('#request').bind('click',function(){
-      y.askPermission();
-    });
+//Step 2: Ask permission (SEE NOTE BELOW CODE)
+$('#request').bind('click',function(){
+  y.askPermission();
+});
 
-    //Step 3: Notify!
-    $('#notify-me').bind('click',function(){
-      y.notify('Title',''the message','notification-img.png');
-    });
+//Step 3: Notify!
+$('#notify-me').bind('click',function(){
+  y.notify('Title',''the message','notification-img.png');
+});
+```
 
 **Note:** When asking permission, you _must_ do it asynchronously via user interaction. For example, a button click. This is part of the notification spec. There are hacks like making the entire body clickable, but just calling `askPermission()` will not do anything.
 
